@@ -33,6 +33,7 @@ Client Cards
 A Client Card represents a person or corporation looking to buy space in your tower. A client has a demand (a pattern) and, often, a special ability. The client will pay you to fulfill her demand, and will then fill up that space in your tower. You don't necessarily get the money or the ability immediately, you can cash it in at the end of any round. An example will be useful here.
 
 Let's say you're eyeing the client card DrugCorp, which is in the middle of the table at the start of round 1. DrugCorp looks like this:
+
 	Pattern: [r][r]
 	            [r]
 	            [r]
