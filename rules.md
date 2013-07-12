@@ -2,6 +2,14 @@ Rules
 =====
 
 
+Pieces
+------
+100 or so Client cards, each with a colored pattern, a flavor picture, and special ability description.
+300 or so Room tile pieces, each with a color, label, and small icon. The types include: Office (white), Retail (Green), Residence (Blue), Elevator (Gray), and maybe a few others.
+100 $1 coin chips
+50 $2 coin chips
+20 $5 coin chips
+
 Setup
 -----
 * Place all the Room tiles face-down and randomly re-arrange them. 
@@ -57,6 +65,6 @@ Endgame
 --------
 After 5 rounds, the game ends. The player with the most $ wins, *however* there are a few important bonuses which now take effect.
 
-* The player with the tallest tower at the end of the game is granted $10.
+* The player with the tallest tower at the end of the game is granted $20.
 * Each player gets $2 for each floor connected to the ground by an elevator.
 * Extra $1 for each occupied room above the 8th floor, and an extra $2 for each occupied room above the 15th floor.

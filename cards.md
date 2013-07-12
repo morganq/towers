@@ -34,7 +34,8 @@ Mom & Pop Federation
 
 	[r][r]
 
-	A Mom & Pop store may not be adjacent (up down left right) to any other retail tiles.
+	When cashing in, a Mom & Pop store may not be adjacent (up down left right)
+	to any other retail tiles.
 
 FutureTek Showroom
 
@@ -54,6 +55,20 @@ World Famous Revolving Espresso Bar
 	[r][r][r][r]
 
 	Gain $10 if the Espresso Bar is on the top floor of your tower.
+
+Not A Mafia Front
+
+	      [r]
+	   [r][r]
+	[r][r][r]
+
+	The next Client you cash in grants an extra $1 per room, but loses its Special Ability.
+
+Coffee Shop Megacorp
+
+	[r]   [r]
+	[r]   [r]
+
 
 
 Office
@@ -83,3 +98,35 @@ RightMessage Marketing Professionals
 
 	Swap a Client in your hand with one selected at random from a chosen player's hand.
 
+Payne & Son Security
+
+	[o][o]
+	[o][o]
+	[o]
+
+	A player of your choice discards one card of his choosing, or if she has $5 spare
+	she may choose to pay you $5 instead. 
+
+No Such Agency
+
+	[o][o][o][o][o]
+
+	Privately look at the next set of Client cards and take one of your choice. Don't
+	take a first Client card next round (so you will still gain 2 in total.)
+
+QBQ Technologies Satellite Office
+
+	[o][o]
+	[o][o]
+
+	Gain a $1 for each room, for each other QBQ Satellite Office Client played 
+	so far by all players. 
+
+Acme Capital Appropriations
+
+	[o]
+	[o][o]
+	[o][o][o]
+
+	Take a Room tile without any $ on it from the top of each other player's tower.
+	You may place them during the next round. 
