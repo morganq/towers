@@ -38,9 +38,13 @@ Let's say you're eyeing the client card DrugCorp, which is in the middle of the 
 	            [r]
 	            [r]
 
-	Ability: When any other players cash in a non-DrugCorp retail Client, DrugCorp buys out 2 of those rooms instead. That player may not put $ coins on two rooms (their choice), and you put an extra $ coin on each of two DrugCorp rooms (your choice; doesn't matter) in your tower. 
+	Ability: When any other players cash in a non-DrugCorp retail Client,
+	DrugCorp buys out 2 of those rooms instead. That player may not place
+	$ coins on two rooms (their choice), and you put an extra $ coin on each
+	of two DrugCorp rooms (your choice; doesn't matter) in your tower. 
 
 You have 5 Retail spaces to place, so you take four of them and make one copy of the pattern somewhere within your building. At the end of the round, your building looks like this:
+
 	[r][r]
 	[o][r][e]
 	[o][r][e][r][h]
