@@ -68,3 +68,7 @@ After 5 rounds, the game ends. The player with the most $ wins, *however* there 
 * The player with the tallest tower at the end of the game is granted $20.
 * Each player gets $2 for each floor connected to the ground by an elevator.
 * Extra $1 for each occupied room above the 8th floor, and an extra $2 for each occupied room above the 15th floor.
+
+Exceptions & Notes
+------------------
+* Residential clients never buy more than one copy of a pattern in your tower.

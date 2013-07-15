@@ -11,31 +11,26 @@ class TileType:
 		self.color = color
 		self.scoringArrangement = scoringArrangement
 
-residential = TileType("Res...", (128,255,128), "horizontal")
-elevator = TileType("Ele...", (128,128,128), "vertical")
-office = TileType("Office", (255,128,128), "any")
-retail = TileType("Retail", (128,128,255), "bottom")
+residential = TileType("Res...", (240,240,24), "horizontal")
+elevator = TileType("Ele...", (128,64,148), "vertical")
+office = TileType("Office", (64,64,255), "any")
+retail = TileType("Retail", (220,64,64), "bottom")
 
 class Tile:
-	def __init__(self, tileType, tileSubtype = None, tileFeature = None):
+	def __init__(self, tileType):
 		self.tileType = tileType
-		self.tileSubtype = tileSubtype
-		self.tileFeature = tileFeature
 
-t_res_hot_base = Tile(residential, "Hotel")
-t_res_con_base = Tile(residential, "Condo")
-t_res_pen_base = Tile(residential, "Penthouse")
+t_retail = Tile(retail)
 
-t_off_fin_base = Tile(office, "Financial")
-t_off_tec_base = Tile(office, "Technology")
-t_off_med_base = Tile(office, "Media")
+t_office = Tile(office)
 
 t_elevator = Tile(elevator)
 
-t_retail_base = Tile(retail)
+t_residential = Tile(residential)
 
 tileDeck = []
 clientDeck = []
+scored = []
 
 def addTiles(tileType, num=1):
 	for i in range(num):
@@ -45,14 +40,10 @@ def addClients(clientType, num=1):
 	for i in range(num):
 		clientDeck.append(clientType)
 
-addTiles(t_res_hot_base, 10)
-addTiles(t_res_con_base, 10)
-addTiles(t_res_pen_base, 10)
-addTiles(t_off_fin_base, 10)
-addTiles(t_off_tec_base, 10)
-addTiles(t_off_med_base, 10)
-addTiles(t_elevator, 20)
-addTiles(t_retail_base, 10)
+addTiles(t_retail, 30)
+addTiles(t_office, 30)
+addTiles(t_elevator, 15)
+addTiles(t_residential, 15)
 
 shuffle(tileDeck)
 shuffle(clientDeck)
@@ -76,10 +67,6 @@ def drawTileAt(s, t, x, y):
 	textSurf = font.render(t.tile.tileType.name, True, (0,0,0))
 	s.blit(textSurf, (w / 2 - textSurf.get_width() / 2 + x, h / 2 - 12 + y))
 
-	if t.tile.tileSubtype:
-		textSurf = font.render(t.tile.tileSubtype, True, (0,0,0))
-		s.blit(textSurf, (w / 2 - textSurf.get_width() / 2 + x, h / 2 + y))
-
 def drawPlacedTile(s, t):
 	x = t.position[0] * gridSize
 	y = t.position[1] * gridSize
@@ -94,6 +81,9 @@ def drawState(s):
 	for pt in placedTiles:
 		drawPlacedTile(s, pt)
 
+	for pt in scored:
+		pygame.draw.circle(s, (0,0,0), pt, gridSize / 4, 0)
+
 	for i in range(screen.get_width() / gridSize):
 		pygame.draw.line(s, (0, 0, 0), (i*gridSize, 0), (i*gridSize, screen.get_height()))
 	for i in range(screen.get_height() / gridSize):
@@ -107,7 +97,7 @@ def grabHandTileAt(pos):
 		tileHand[j].position = (tileHand[j].position[0], tileHand[j].position[1] - 1)
 	return tileHand.pop(i)
 
-tilesPerHand=12
+tilesPerHand=10
 
 def newTileHand():
 	global tileHand
@@ -127,12 +117,16 @@ while 1:
 		if event.type == pygame.QUIT:
 			sys.exit()
 		if event.type == pygame.MOUSEBUTTONUP:
-			if tileToPlace:
-				tileToPlace.position = (event.pos[0] / gridSize, event.pos[1] / gridSize)
-				placedTiles.append(tileToPlace)
-				tileToPlace = None
-			else:
-				tileToPlace = grabHandTileAt(event.pos)
+			if event.button == 1:
+				if tileToPlace:
+					tileToPlace.position = (event.pos[0] / gridSize, event.pos[1] / gridSize)
+					placedTiles.append(tileToPlace)
+					tileToPlace = None
+				else:
+					tileToPlace = grabHandTileAt(event.pos)
+		if event.type == pygame.MOUSEBUTTONDOWN:
+			if event.button == 3:
+				scored.append(event.pos)
 
 		if event.type == pygame.KEYDOWN:
 			if event.key == pygame.K_SPACE:
