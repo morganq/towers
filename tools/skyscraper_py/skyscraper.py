@@ -134,6 +134,8 @@ while 1:
 			if event.key == pygame.K_BACKSPACE:
 				tileHand = []
 				tileToPlace = None
+			if event.key == pygame.K_e:
+				tileHand.append(PlacedTile(t_elevator, (0,len(tileHand)) ))
 
 	drawState(screen)
 	if tileToPlace is not None:

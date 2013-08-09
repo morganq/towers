@@ -59,11 +59,11 @@ roundNum = 0
 while 1:
 	cmd = raw_input(">").strip()
 	if cmd == "round":
-		roundNum += 1
 		print "round " + str(roundNum)
 		revealed = deck[:6]
 		deck = deck[6:]
 		showCards(revealed)
+		roundNum += 1
 
 
 	if cmd == "pick1":

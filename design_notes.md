@@ -32,7 +32,10 @@ Game 1, Strategy: Retail on the bottom, tower of offices up.
 Total $ = 43. Double-score tiles: 5
 
 Game 2, Strategy: 6-wide straight up.
-28 + 22(11x2) + 6(2x3) = 56
+28 + 22(11x2) + 6(2x3) = $56
+
+Game 3, Strategy: slanted in, get higher before cashing a lot
+$60.
 
 Changes
 =======
